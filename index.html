@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برای فاطمه عزیز ❤️</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 50%, #a1c4fd 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #5a3e36;
+            overflow-x: hidden;
+            font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 30px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #e84393, #fd79a8, #e84393);
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            color: #e84393;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        
+        .name {
+            font-size: 3.5rem;
+            color: #fd79a8;
+            background: linear-gradient(45deg, #e84393, #fd79a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin: 15px 0;
+            text-shadow: none;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #5a3e36;
+            font-weight: 500;
+        }
+        
+        .heart-btn {
+            background: linear-gradient(45deg, #e84393, #fd79a8);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(232, 67, 147, 0.4);
+            margin: 20px 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .heart-btn:hover {
+            transform: translateY(-7px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(232, 67, 147, 0.6);
+        }
+        
+        .interactive-elements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 35px 0;
+        }
+        
+        .element {
+            width: 140px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .element:hover {
+            transform: translateY(-10px) scale(1.08);
+        }
+        
+        .element-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .element-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        .flower {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        
+        .gift {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        
+        .music {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .message {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        
+        .surprise-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .surprise-content {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 550px;
+            width: 90%;
+            transform: scale(0.8);
+            transition: transform 0.5s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .surprise-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #e84393, #fd79a8, #e84393);
+            border-radius: 25px 25px 0 0;
+        }
+        
+        .surprise-container.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .surprise-container.active .surprise-content {
+            transform: scale(1);
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #e84393;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            transform: rotate(90deg);
+            background: #fd79a8;
+        }
+        
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 28px;
+            color: #e84393;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .hidden-message {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(232, 67, 147, 0.1);
+            border-radius: 15px;
+            border-right: 5px solid #e84393;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        
+        .hidden-message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .special-text {
+            font-size: 1.5rem;
+            color: #e84393;
+            font-weight: 700;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: rgba(232, 67, 147, 0.1);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        
+        .music-player {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            padding: 12px 25px;
+            margin: 20px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e84393;
+        }
+        
+        .music-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .music-btn {
+            background: #e84393;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .music-btn:hover {
+            background: #fd79a8;
+            transform: scale(1.1);
+        }
+        
+        .music-info {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #5a3e36;
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .volume-slider {
+            width: 80px;
+        }
+        
+        .visualizer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 3px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        
+        .bar {
+            width: 5px;
+            background: linear-gradient(to top, #e84393, #fd79a8);
+            border-radius: 3px;
+            transition: height 0.2s ease;
+        }
+        
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .name {
+                font-size: 2.8rem;
+            }
+            
+            .element {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .element-icon {
+                font-size: 2rem;
+            }
+            
+            .element-text {
+                font-size: 1rem;
+            }
+            
+            .music-player {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                border-radius: 25px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .interactive-elements {
+                gap: 15px;
+            }
+            
+            .element {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        /* استایل مخصوص فونت کشیده */
+        .stretched-text {
+            letter-spacing: 3px;
+            font-stretch: ultra-expanded;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <div class="container">
+        <h1>برای <span class="name stretched-text">فاطمه</span> عزیزم</h1>
+        <p>هر المانی که کلیک کنی، یک سورپرایز ویژه برای تو دارم!</p>
+        
+        <!-- پخش کننده موسیقی -->
+        <div class="music-player">
+            <div class="music-info">آهنگ عاشقانه برای فاطمه ❤️</div>
+            <div class="music-controls">
+                <button class="music-btn" id="playBtn">▶️</button>
+                <button class="music-btn" id="pauseBtn">⏸️</button>
+                <div class="volume-control">
+                    <span>🔊</span>
+                    <input type="range" min="0" max="1" step="0.1" value="0.7" class="volume-slider" id="volumeSlider">
+                </div>
+            </div>
+        </div>
+        
+        <div class="visualizer" id="visualizer"></div>
+        
+        <button class="heart-btn" id="mainBtn">برای فاطمه کلیک کن ❤️</button>
+        
+        <div class="interactive-elements">
+            <div class="element flower" id="flower">
+                <div class="element-icon">🌸</div>
+                <div class="element-text">گل‌ها</div>
+            </div>
+            <div class="element gift" id="gift">
+                <div class="element-icon">🎁</div>
+                <div class="element-text">هدیه</div>
+            </div>
+            <div class="element music" id="music">
+                <div class="element-icon">🎵</div>
+                <div class="element-text">موسیقی</div>
+            </div>
+            <div class="element message" id="message">
+                <div class="element-icon">💌</div>
+                <div class="element-text">پیام</div>
+            </div>
+        </div>
+        
+        <div class="hidden-message" id="hiddenMessage">
+            <p>فاطمه جان، تو خاص‌ترین فرد زندگی منی و هر روز با وجودت دنیای من زیباتر می‌شه! 🌟</p>
+            <div class="special-text">عاشقتم تا ابد ❤️</div>
+        </div>
+    </div>
+    
+    <div class="surprise-container" id="surpriseContainer">
+        <div class="surprise-content">
+            <h2>سورپرایز! <span class="name">فاطمه</span> جان 🎉</h2>
+            <p id="surpriseText">این یک پیام ویژه برای توست!</p>
+            <button class="close-btn" id="closeBtn">×</button>
+        </div>
+    </div>
+
+    <!-- عنصر صوتی -->
+    <audio id="backgroundMusic" loop>
+        <source src="f.mp3" type="audio/mpeg">
+        مرورگر شما از پخش کننده صوتی پشتیبانی نمی‌کند.
+    </audio>
+
+    <script>
+        // عناصر DOM
+        const mainBtn = document.getElementById('mainBtn');
+        const flowerBtn = document.getElementById('flower');
+        const giftBtn = document.getElementById('gift');
+        const musicBtn = document.getElementById('music');
+        const messageBtn = document.getElementById('message');
+        const hiddenMessage = document.getElementById('hiddenMessage');
+        const surpriseContainer = document.getElementById('surpriseContainer');
+        const surpriseText = document.getElementById('surpriseText');
+        const closeBtn = document.getElementById('closeBtn');
+        const heartsContainer = document.getElementById('heartsContainer');
+        
+        // عناصر موسیقی
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const visualizer = document.getElementById('visualizer');
+        
+        // ایجاد ویژیوالایزر
+        function createVisualizer() {
+            visualizer.innerHTML = '';
+            for (let i = 0; i < 20; i++) {
+                const bar = document.createElement('div');
+                bar.classList.add('bar');
+                bar.style.height = `${Math.random() * 30 + 5}px`;
+                visualizer.appendChild(bar);
+            }
+        }
+        
+        // به روزرسانی ویژیوالایزر
+        function updateVisualizer() {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => {
+                const newHeight = Math.random() * 30 + 5;
+                bar.style.height = `${newHeight}px`;
+            });
+        }
+        
+        // پیام‌های سورپرایز مخصوص فاطمه
+        const surpriseMessages = [
+            "فاطمه جان، تو زیباترین هدیه زندگی منی! 🌹",
+            "فاطمه عزیز، هر روز با تو مثل بهار میمونه! 🌸",
+            "فاطمه‌ی نازم، دوستت دارم بیشتر از هر چیزی! 💖",
+            "فاطمه‌ی قشنگم، تو باعث خوشبختی منی! ✨",
+            "فاطمه‌ی مهربون، همیشه کنارم باش قشنگم! 🌟",
+            "فاطمه‌ی عزیزم، چشمانت ستاره‌های آسمان زندگی منن! ⭐",
+            "فاطمه‌ی زندگی من، بودن با تو بهترین حس دنیاست! 💕",
+            "فاطمه‌ی نازم، لبخندت دنیای من رو روشن میکنه! ☀️"
+        ];
+        
+        // افکت قلب‌های شناور
+        function createHearts(count) {
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    heartsContainer.appendChild(heart);
+                    
+                    // حذف قلب پس از انیمیشن
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 6000);
+                }, i * 200);
+            }
+        }
+        
+        // نمایش سورپرایز
+        function showSurprise(message) {
+            surpriseText.textContent = message;
+            surpriseContainer.classList.add('active');
+            createHearts(20);
+        }
+        
+        // کنترل‌های موسیقی
+        playBtn.addEventListener('click', function() {
+            backgroundMusic.play();
+            // شروع انیمیشن ویژیوالایزر
+            if (!window.visualizerInterval) {
+                window.visualizerInterval = setInterval(updateVisualizer, 200);
+            }
+        });
+        
+        pauseBtn.addEventListener('click', function() {
+            backgroundMusic.pause();
+            // توقف انیمیشن ویژیوالایزر
+            if (window.visualizerInterval) {
+                clearInterval(window.visualizerInterval);
+                window.visualizerInterval = null;
+            }
+        });
+        
+        volumeSlider.addEventListener('input', function() {
+            backgroundMusic.volume = this.value;
+        });
+        
+        // رویدادهای کلیک
+        mainBtn.addEventListener('click', function() {
+            createHearts(12);
+            hiddenMessage.classList.toggle('show');
+            
+            // تغییر متن دکمه
+            if (mainBtn.textContent.includes('کلیک کن')) {
+                mainBtn.textContent = 'باز هم کلیک کن فاطمه جان! 💕';
+                mainBtn.style.padding = '18px 40px';
+            }
+        });
+        
+        flowerBtn.addEventListener('click', function() {
+            showSurprise("فاطمه‌ی گل بهم، برای تو باغی از گل میخرم تا همیشه خوشبو باشی! 🌷");
+        });
+        
+        giftBtn.addEventListener('click', function() {
+            showSurprise("فاطمه‌ی عزیزم، هدیه واقعی من عشق بی‌پایانم به توئه! 🎁");
+        });
+        
+        musicBtn.addEventListener('click', function() {
+            showSurprise("فاطمه‌ی نازم، صدای خنده تو زیباترین موسیقی دنیاست! 🎶");
+            // پخش خودکار موسیقی هنگام کلیک روی آیکون موسیقی
+            backgroundMusic.play();
+            if (!window.visualizerInterval) {
+                window.visualizerInterval = setInterval(updateVisualizer, 200);
+            }
+        });
+        
+        messageBtn.addEventListener('click', function() {
+            const randomMessage = surpriseMessages[Math.floor(Math.random() * surpriseMessages.length)];
+            showSurprise(randomMessage);
+        });
+        
+        // بستن پنجره سورپرایز
+        closeBtn.addEventListener('click', function() {
+            surpriseContainer.classList.remove('active');
+        });
+        
+        // بستن با کلیک بیرون از محتوا
+        surpriseContainer.addEventListener('click', function(e) {
+            if (e.target === surpriseContainer) {
+                surpriseContainer.classList.remove('active');
+            }
+        });
+        
+        // ایجاد چند قلب در ابتدا
+        window.addEventListener('load', function() {
+            createHearts(8);
+            createVisualizer();
+            
+            // پخش خودکار موسیقی پس از تایید کاربر
+            setTimeout(() => {
+                const playMusic = confirm("فاطمه جان، میخوای یه آهنگ عاشقانه برات پخش کنم؟");
+                if (playMusic) {
+                    backgroundMusic.play();
+                    window.visualizerInterval = setInterval(updateVisualizer, 200);
+                }
+            }, 1500);
+            
+            // نمایش خوش آمدگویی
+            setTimeout(() => {
+                showSurprise("فاطمه‌ی عزیزم، خوش اومدی! کلیک کن و سورپرایزها رو ببین! 💖");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
